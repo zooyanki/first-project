@@ -78,45 +78,60 @@ section {
 .header__main-illustration {
   width: 765px;
   height: 608px;
-  background-image: url('../images/header-image.png');
-  background-size: cover;
   position: absolute;
   bottom: 0px;
   right: 0px;
 }
+
+.header__main-illustration-image {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!CONTENTN-T-t-t-t!!!!!!!!!!!!!!!!!!!!!!*/
 .two-columns {
   display: flex;
   flex-direction: row;
   width: 80%;
-  margin: auto;
-
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .two-columns__brief {
-  display: flex;
-  min-width: 175px;
+    min-width: 175px;
+    margin: 0 auto;
 }
 
 .two-columns__text_brief {
-  text-decoration: none;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  margin:0;
 }
 
 .two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-span {
+.two-columns__span-accent {
   font-weight: bold;
 }
 
 .two-columns__paragraph {
-  margin-bottom: 30px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .two-columns__text_paragraph {
@@ -176,23 +191,26 @@ span {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin: 0 0 20px;
 }
 
 .table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-top: 20px;
 }
 
 /*!!!!!!!!!!!!!!!!!!!! MR.FEYNMAN !!!!!!!!!!!!!!!!!!*/
 .feinman {
   margin-top: 100px;
   background-color: #f2f2f2;
+  background-image: url("../images/feynman.png");
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
   height: 790px;
   position: relative;
   text-align: center;
-
 }
 
 .feinman__title {
@@ -204,13 +222,6 @@ span {
   position: absolute;
   right: 48px;
   top: 50%;
-}
-
-.feinman__image {
-  width: 867px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
 }
 
 .feinman__text_title {
@@ -294,7 +305,7 @@ span {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .table__text_theme_dark {
@@ -315,13 +326,82 @@ span {
 
 /*!!!!!!!!!!!!!!!!!!!F_F_F_F_F_F_F_00000000_T-E-R!!!!!!!!!!!!!!!!!!!!!*/
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: #1f1f1f;
-  margin-top: 60px;
   text-align: center;
-  position: relative;
+  min-height: 350px;
+  color: white;
 }
 
 .footer__columns {
   width: 90%;
+  margin: 40px 0 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
   flex-basis: 711px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo__place_footer {
+  width: 183px;
+  height: 35px;
+}
+.footer__author {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  margin-top: 16px;
+}
+
+.footer__column_content_info {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__column_content_social {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__text_heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__text_links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__column_links {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__column_list_links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.footer__social_images {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
